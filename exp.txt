@@ -1,1 +1,2 @@
 This is example file
+Added to test the branch feature
