@@ -1,0 +1,6 @@
+some changes
+<<<<<<< HEAD
+<dev 2 changes>
+=======
+<dev1 changes>
+>>>>>>> feature_branch
