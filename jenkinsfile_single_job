@@ -20,7 +20,7 @@ pipeline {
 	    }
 	  }
 	}  
-	   stage("Deploy the maven war package on tomcat){
+	   stage("Deploy the maven war package on tomcat"){
 		steps{
 	             node ("deploy_server"){
 		     //delete the old war package
