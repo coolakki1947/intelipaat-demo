@@ -14,7 +14,7 @@ pipeline {
 		   sh "mvn clean install"
 
 		  //stash the war package
-		  dir (/home/ubuntu/build_server/workspace/single_job_pipeline/target) {
+		  dir ("/home/ubuntu/build_server/workspace/single_job_pipeline/target/") {
 		  stash(includes:"hello-world-webapp.war",name:"package_maven")
 	      }
 	    }
