@@ -9,11 +9,10 @@ pipeline{
             }    
         }
 	stage("This stage will copy the package to s3 bucket")
-	{
-		steps {
-		sh "aws s3 cp /home/ubuntu/build_server/workspace/declaritive_pipeline_example/target/hello-world-webapp.war 
-		s3://coolakki1947-package-location"
+		{
+			steps {
+			sh "aws s3 cp /home/ubuntu/build_server/workspace/declaritive_pipeline_example/target/hello-world-webapp.war s3://coolakki1947-package-location"
+				}
 		}
 	}
-    }
 }
