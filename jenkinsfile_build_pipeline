@@ -1,11 +1,11 @@
 pipeline{
-    agent {label "build_server}
+    agent {label "build_server"}
     stages{
         stage("Build the maven package"){
           steps{
           print("Deleting the old maven package")
           print("Creating new maven package")
-          sh "mvn cleam install"
+          sh "mvn clean install"
       }
     }
   }
