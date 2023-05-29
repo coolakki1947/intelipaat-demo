@@ -1,4 +1,5 @@
 pipeline{
+   def s3_source = "/home/ubuntu/build_server/workspace/build_job_pipeline/target/hello-world-webapp.war"
     agent {label "build_server"}
     stages{
         stage("Build the maven package"){
@@ -6,6 +7,13 @@ pipeline{
           print("Deleting the old maven package")
           print("Creating new maven package")
           sh "mvn clean install"
+      }
+    }
+        stage("copy the maven package to was s3"){
+	  steps{
+	  print("copying the maven package to s3 bucket")
+          sh "aws s3 cp ${s3_source} s3://coolakki1947-pipeline"  
+	
       }
     }
   }
