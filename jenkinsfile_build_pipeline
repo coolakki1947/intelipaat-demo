@@ -1,5 +1,6 @@
+def s3_source = "/home/ubuntu/build_server/workspace/build_job_pipeline/target/hello-world-webapp.war"
 pipeline{
-   def s3_source = "/home/ubuntu/build_server/workspace/build_job_pipeline/target/hello-world-webapp.war"
+
     agent {label "build_server"}
     stages{
         stage("Build the maven package"){
