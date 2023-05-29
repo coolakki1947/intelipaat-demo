@@ -1,7 +1,7 @@
 def s3_source = "s3://coolakki1947-pipeline/hello-world-webapp.war"
 def s3_dest   = "/home/ubuntu/deploy_server/tomcat/webapps"
 pipeline{
-    agent {label "build_server"}
+    agent {label "deploy_server"}
 	stages{
 	   stage("Deleting the old package"){
 	     steps{
